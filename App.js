@@ -14,10 +14,9 @@ import {
   StatusBar,
   StyleSheet,
   useColorScheme,
-  View,
 } from 'react-native';
 
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {WebView as RNWebView} from 'react-native-webview';
 
@@ -34,16 +33,12 @@ const App: () => Node = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: 'red',
-          }}>
+       
           <RNWebView
-            style={{height: 500, width: '100%'}}
+          style={{ height: 500 }}
             source={{uri: 'https://google.com'}}
           />
-        </View>
+     
       </ScrollView>
     </SafeAreaView>
   );
